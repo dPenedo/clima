@@ -1,4 +1,4 @@
-window.addEventListener('load', ()=>{
+    console.log("macarroni")
         let lon
         let lat
         let temperaturaValor = document.getElementById('temperatura-valor')
@@ -85,7 +85,6 @@ window.addEventListener('load', ()=>{
                 })
         })
     }
-})
 
 
 
