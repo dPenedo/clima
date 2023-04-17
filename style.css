@@ -25,14 +25,6 @@ background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); /* W3C, IE 10+
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.card-titulo{
-    font-weight: 600;
-    font-size: 5vw;
-}
-.card-subtitulo{
-    font-weight: 400;
-    font-size: 3vw;
-}
 
 
 #contenedor{
@@ -40,6 +32,17 @@ background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); /* W3C, IE 10+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
+}
+
+
+
+.card-titulo{
+    font-weight: 600;
+    font-size: 2rem;
+}
+.card-subtitulo{
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 #caja1, #caja2, #caja3, #caja4{
     display: inline-block;
@@ -98,3 +101,9 @@ body{
     height: 12rem;
 }
 
+.card-titulo{
+    font-size: 1.2rem;
+}
+.card-subtitulo{
+    font-size: 1rem;
+}
