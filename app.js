@@ -4,8 +4,6 @@ let temperaturaValor = document.getElementById("temperatura-valor");
 let temperaturaDescripcion = document.getElementById("temperatura-descripcion");
 
 let ubicacion = document.getElementById("ubicacion");
-let maxTemp = document.getElementById("max-temp")
-let minTemp = document.getElementById("min-temp")
 let calidadAire = document.getElementById("calidad-aire")
 let iconoAnimado = document.getElementById("icono-animado");
 let iconoAire = document.getElementById("icono-aire");
@@ -27,6 +25,15 @@ let infoSo2 = document.getElementById("info-so2")
 let infoPm25 = document.getElementById("info-pm2-5")
 let infoPm10 = document.getElementById("info-pm10")
 let infoNh3 = document.getElementById("info-nh3")
+
+// informacion adicional Temperatura
+let maxTemp = document.getElementById("max-temp")
+let minTemp = document.getElementById("min-temp")
+let humedad = document.getElementById("humedad")
+let presion = document.getElementById("presion")
+let sensacion = document.getElementById("sensacion")
+
+
 
 let infoVisible = false
 let infoVisibleTemp = false
@@ -148,6 +155,20 @@ if (navigator.geolocation) {
         ubicacion.textContent = data.name;
         maxTemp.textContent = data.main.temp_max;
         minTemp.textContent = data.main.temp_min;
+        if (data.main.humidity >= 60 ){
+        humedad.textContent = data.main.humidity + " (alta)";
+                } else if (data.main.humidity >= 30 && data.main.humidity <= 60){
+        humedad.textContent = data.main.humidity + " (adecuada)";
+                } else{
+        humedad.textContent = data.main.humidity + " (baja)";
+                }
+        sensacion.textContent = data.main.feels_like;
+        if (data.main.pressure >= 1013.25){
+        presion.textContent = data.main.pressure + " (alta)";
+                } else{
+        presion.textContent = data.main.pressure + " (baja)";
+                }
+
 
         vientoVelocidad.textContent = `${data.wind.speed} m/s`;
         vientoDireccion.textContent = `${data.wind.deg}º`
