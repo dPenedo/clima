@@ -13,18 +13,28 @@
         <h1 id="titulo-app">Clima Actual</h1>
         <div id="contenedor">
             <div id="caja1">
-                <h1 id="temperatura-valor"></h1>
-                <h1 id="temperatura-descripcion"></h1>
+                <h1 class="card-titulo">Temperatura actual:</h1>
+                <h3 class="card-subtitulo" id="temperatura-valor"></h3>
+                <h3 class="card-subtitulo" id="temperatura-descripcion"></h3>
             </div>
             <div id="caja2">
-                <h2 id="ubicacion"></h2>
+                <h2 class="card-titulo" id="ubicacion"></h2>
+                <h5 class="card-subtitulo">Max: <span id="max-temp"></span>ºC  </h5>
+                
+                <h5 class="card-subtitulo">Min: <span id="min-temp"></span>ºC</h5>
+                
                 <img id="icono-animado" src="" alt="" height="128" width="128"></img>
             </div>
             <div id="caja3">
-                <h3>Velocidad del viento</h3>
-                <h1 id="viento-velocidad"></h1>
+                <h1 class="card-titulo">Velocidad del viento:</h1>
+                <h3 class="card-subtitulo"id="viento-velocidad"></h3>
             </div>
 
+            <div id="caja4">
+                <h1 class="card-titulo">Calidad del aire:</h1>
+                <h3 class="card-titulo"id="calidad-aire"></h3>
+
+            </div>
         </div>
     
 </body>
