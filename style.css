@@ -52,7 +52,7 @@ li{
     padding-top: 5%;
     padding-bottom: 5%;
     width: 25rem;
-    height: fit-content;
+    height: auto;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
@@ -70,6 +70,18 @@ li{
     font-weight: 400;
     font-size: 1.1rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .card-info{
