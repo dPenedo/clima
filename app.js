@@ -8,9 +8,56 @@ let maxTemp = document.getElementById("max-temp")
 let minTemp = document.getElementById("min-temp")
 let calidadAire = document.getElementById("calidad-aire")
 let iconoAnimado = document.getElementById("icono-animado");
+let iconoAire = document.getElementById("icono-aire");
 const apiKey = "982720c8a3be9d384303bf34920ad717"
-
 let vientoVelocidad = document.getElementById("viento-velocidad");
+let vientoDireccion = document.getElementById("viento-direccion");
+let masInformacion = document.getElementById("mas-informacion-aire")
+let masInformacionTemp = document.getElementById("mas-informacion-temp")
+let cardInfoLista = document.getElementById("card-info-lista")
+let cardInfoListaTemp = document.getElementById("card-info-lista-temp")
+
+// Informacion adicional aire
+
+let infoCo = document.getElementById("info-co")
+let infoNo = document.getElementById("info-no")
+let infoNo2 = document.getElementById("info-no2")
+let infoO3 = document.getElementById("info-o3")
+let infoSo2 = document.getElementById("info-so2")
+let infoPm25 = document.getElementById("info-pm2-5")
+let infoPm10 = document.getElementById("info-pm10")
+let infoNh3 = document.getElementById("info-nh3")
+
+let infoVisible = false
+let infoVisibleTemp = false
+
+// Añadir informacion de la Calidad del aire
+masInformacion.addEventListener("click", function(){
+    if (infoVisible === true){
+        infoVisible = false
+        cardInfoLista.classList.remove("card-info-lista-visible")
+    }
+    else{
+        infoVisible = true
+    cardInfoLista.classList.add("card-info-lista-visible")
+        }
+})
+
+// Añadir informacion de la Temperatura
+
+masInformacionTemp.addEventListener("click", function (){
+    if (infoVisibleTemp === true) {
+        infoVisibleTemp = false;
+        cardInfoListaTemp.classList.remove("card-info-lista-temp-visible")
+    } else {
+        infoVisibleTemp = true
+        cardInfoListaTemp.classList.add("card-info-lista-temp-visible")
+    }
+})
+
+
+
+
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition((posicion) => {
@@ -31,22 +78,47 @@ if (navigator.geolocation) {
         switch (data.list[0].main.aqi) {
           case 1:
             calidadAire.textContent = "Buena"
+            iconoAire.src = "img/like.png";
+            // iconoAire.classList.add("buena-icono")
+            iconoAire.setAttribute("id", "buena-icono")
+            calidadAire.classList.add("buena")
             break;
           case 2:
             calidadAire.textContent = "Aceptable"
+            iconoAire.src = "img/like.png";
+            iconoAire.setAttribute("id", "aceptable-icono")
+            calidadAire.classList.add("aceptable")
             break;
           case 3:
             calidadAire.textContent = "Moderada"
+            iconoAire.src = "img/regular.png";
+            iconoAire.setAttribute("id", "moderada-icono")
+            calidadAire.classList.add("moderada")
             break;
           case 4:
             calidadAire.textContent = "Pobre"
+            iconoAire.src = "img/dislike.png";
+            iconoAire.setAttribute("id", "pobre-icono")
+            calidadAire.classList.add("pobre")
             break;
           case 5:
             calidadAire.textContent = "Muy Pobre"
+            iconoAire.src = "img/dislike.png";
+            iconoAire.setAttribute("id", "muy-pobre-icono")
+            calidadAire.classList.add("muy-pobre")
             break;
           default:
             calidadAire.textContent = "---"
         }
+
+        infoCo.textContent = data.list[0].components.co;
+        infoNo.textContent = data.list[0].components.no;
+        infoNo2.textContent = data.list[0].components.no2;
+        infoO3.textContent = data.list[0].components.o3;
+        infoSo2.textContent = data.list[0].components.so2;
+        infoPm25.textContent = data.list[0].components.pm2_5;
+        infoPm10.textContent = data.list[0].components.pm10;
+        infoNh3.textContent = data.list[0].components.nh3;
 
         console.log(data.list[0].main.aqi)
         console.log(data)
@@ -78,6 +150,7 @@ if (navigator.geolocation) {
         minTemp.textContent = data.main.temp_min;
 
         vientoVelocidad.textContent = `${data.wind.speed} m/s`;
+        vientoDireccion.textContent = `${data.wind.deg}º`
 
         console.log(data.weather[0].main);
         switch (data.weather[0].main) {

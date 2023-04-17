@@ -12,28 +12,45 @@
 
         <h1 id="titulo-app">Clima Actual</h1>
         <div id="contenedor">
-            <div id="caja1">
-                <h1 class="card-titulo">Temperatura actual:</h1>
-                <h3 class="card-subtitulo" id="temperatura-valor"></h3>
-                <h3 class="card-subtitulo" id="temperatura-descripcion"></h3>
-            </div>
-            <div id="caja2">
-                <h2 class="card-titulo" id="ubicacion"></h2>
-                <h5 class="card-subtitulo">Max: <span id="max-temp"></span>ºC  </h5>
+            <div id="caja1" class="card">
+                <h1 class="card-titulo" id="ubicacion"></h1>
+                <h3 class="card-subtitulo">Temperatura actual: <span id="temperatura-valor"> </span></h3>
+                <p class="card-info" id="mas-informacion-temp">Más información »</p>
+               <ul id="card-info-lista-temp">
+                    <li class="card-subtitulo"><b>Max: </b><span id="max-temp"></span>ºC  </li>
                 
-                <h5 class="card-subtitulo">Min: <span id="min-temp"></span>ºC</h5>
+                    <li class="card-subtitulo"><b>Min: </b><span id="min-temp"></span>ºC</li>
+                </ul> 
+            </div>
+
+
+            <div id="caja2" class="card">
+                <h3 class="card-titulo" id="temperatura-descripcion"></h3>
                 
                 <img id="icono-animado" src="" alt="" height="128" width="128"></img>
             </div>
-            <div id="caja3">
-                <h1 class="card-titulo">Velocidad del viento:</h1>
-                <h3 class="card-subtitulo"id="viento-velocidad"></h3>
+            <div id="caja3" class="card">
+                <h1 class="card-titulo">Viento:</h1>
+                <img id="icono-viento" class="icono-viento" src="img/wind.png" alt="" height="64" width="64"></img>
+                <h3 class="card-subtitulo">Velocidad: <span id="viento-velocidad"></span></h3>
+                <h3 class="card-subtitulo">Dirección: <span id="viento-direccion"></span></h3>
             </div>
 
-            <div id="caja4">
+            <div id="caja4" class="card">
                 <h1 class="card-titulo">Calidad del aire:</h1>
-                <h3 class="card-titulo"id="calidad-aire"></h3>
-
+                <img id="icono-aire" class="icono-aire" src="" alt="" height="64" width="64"></img>
+                <h3 class="card-subtitulo"id="calidad-aire"></h3>
+                <p class="card-info" id="mas-informacion-aire">Más información »</p>
+                <ul id="card-info-lista">
+                    <li>CO: <span id="info-co"></span></li>
+                    <li>NO: <span id="info-no"></span></li>
+                    <li>NO2: <span id="info-no2"></span></li>
+                    <li>O3: <span id="info-o3"></span></li>
+                    <li>SO2: <span id="info-so2"></span></li>
+                    <li>PM2_5: <span id="info-pm2-5"></span></li>
+                    <li>PM10: <span id="info-pm10"></span></li>
+                    <li>NH3: <span id="info-nh3"></span></li>
+                </ul>
             </div>
         </div>
     
