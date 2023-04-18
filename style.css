@@ -51,8 +51,8 @@ li{
     vertical-align: middle;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    width: 25rem;
-    height: 22rem;
+    width: 20rem;
+    height: 18rem;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: height 0.8s !important;
@@ -89,14 +89,17 @@ li{
 #caja1{
     background-color: rgba(0, 0, 0, 0.777);
     color: azure;
+    height: 14rem;
 }
 #caja2{
     background-color: rgba(21, 12, 80, 0.777);
     color: azure;
+    height: 16rem;
 }
 #caja3{
     background-color: rgba(0, 90, 70, 0.777);
     color: azure;
+    height: 21rem;
 }
 #caja4{
     background-color: rgb(60, 76, 86);
@@ -106,8 +109,8 @@ li{
     background-color: azure;
     padding: 4px;
     border-radius: 10px;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
 }
 
 .icono-aire{
@@ -169,16 +172,16 @@ li{
     transition: 0.8s;
 }
 .card-temp-reducida{
-    height: 22;
+    height: 14rem !important;
     transition: all 0.8s;
 }
 .card-aire-ampliada{
-    height: 22rem !important;
     transition: all 0.8s;
+    height: 22rem !important;
 
 }
 .card-aire-reducida{
-    height: 22rem;
+    height: 18rem;
     transition: all 0.8s;
 }
 
@@ -216,8 +219,8 @@ body{
     text-align: center;
     vertical-align: middle;
     padding-top: 8%;
-    width: 25rem;
-    height: 20rem;
+    /* width: 25rem; */
+    /* height: 20rem; */
     /* min-width: 90%; */
     /* height: fit-content; */
 
@@ -247,7 +250,7 @@ body{
     text-align: center;
     padding-top: 2rem;
     width: 20rem;
-    height: 18rem;
+    /* height: 18rem; */
     /* max-width: 90%; */
 
 }
@@ -259,9 +262,12 @@ body{
     }
 
 .card-titulo{
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 .card-subtitulo{
     font-size: 1rem;
 }
+}
+#caja3{
+    height: 20rem;
 }
