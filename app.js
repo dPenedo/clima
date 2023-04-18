@@ -14,6 +14,12 @@ let masInformacion = document.getElementById("mas-informacion-aire")
 let masInformacionTemp = document.getElementById("mas-informacion-temp")
 let cardInfoLista = document.getElementById("card-info-lista")
 let cardInfoListaTemp = document.getElementById("card-info-lista-temp")
+let cardTemp = document.getElementById("caja1")
+let cardAire = document.getElementById("caja4")
+
+let iconoVientoDireccion = document.getElementById("icono-viento-direccion")
+
+
 
 // Informacion adicional aire
 
@@ -43,10 +49,14 @@ masInformacion.addEventListener("click", function(){
     if (infoVisible === true){
         infoVisible = false
         cardInfoLista.classList.remove("card-info-lista-visible")
+        cardAire.classList.remove("card-aire-ampliada")
+        cardAire.classList.add("card-aire-reducida")
     }
     else{
         infoVisible = true
     cardInfoLista.classList.add("card-info-lista-visible")
+        cardAire.classList.add("card-aire-ampliada")
+        cardAire.classList.remove("card-aire-reducida")
         }
 })
 
@@ -56,9 +66,13 @@ masInformacionTemp.addEventListener("click", function (){
     if (infoVisibleTemp === true) {
         infoVisibleTemp = false;
         cardInfoListaTemp.classList.remove("card-info-lista-temp-visible")
+        cardTemp.classList.remove("card-temp-ampliada")
+        cardTemp.classList.add("card-temp-reducida")
     } else {
         infoVisibleTemp = true
         cardInfoListaTemp.classList.add("card-info-lista-temp-visible")
+        cardTemp.classList.add("card-temp-ampliada")
+        cardTemp.classList.remove("card-temp-reducida")
     }
 })
 
@@ -156,22 +170,49 @@ if (navigator.geolocation) {
         maxTemp.textContent = data.main.temp_max;
         minTemp.textContent = data.main.temp_min;
         if (data.main.humidity >= 60 ){
-        humedad.textContent = data.main.humidity + " (alta)";
+        humedad.textContent = data.main.humidity + "% (alta)";
                 } else if (data.main.humidity >= 30 && data.main.humidity <= 60){
-        humedad.textContent = data.main.humidity + " (adecuada)";
+        humedad.textContent = data.main.humidity + "% (adecuada)";
                 } else{
-        humedad.textContent = data.main.humidity + " (baja)";
+        humedad.textContent = data.main.humidity + "% (baja)";
                 }
         sensacion.textContent = data.main.feels_like;
         if (data.main.pressure >= 1013.25){
-        presion.textContent = data.main.pressure + " (alta)";
+        presion.textContent = data.main.pressure + "hPa (alta)";
                 } else{
-        presion.textContent = data.main.pressure + " (baja)";
+        presion.textContent = data.main.pressure + "hPa (baja)";
                 }
 
 
         vientoVelocidad.textContent = `${data.wind.speed} m/s`;
         vientoDireccion.textContent = `${data.wind.deg}º`
+            
+
+        if ( data.wind.deg >= 337 || data.wind.deg <= 22.5) {
+            iconoVientoDireccion.src = "img/norte.png"
+       } else if (data.wind.deg > 22.5 && data.wind.deg <= 67.5){
+            iconoVientoDireccion.src = "img/noreste.png"
+       } else if (data.wind.deg > 67.5 && data.wind.deg <= 112.5){
+            iconoVientoDireccion.src = "img/este.png"
+       } else if (data.wind.deg > 112.5 && data.wind.deg <= 157.5){
+            iconoVientoDireccion.src = "img/sureste.png"
+       } else if (data.wind.deg > 157.5 && data.wind.deg <= 202.5){
+            iconoVientoDireccion.src = "img/sur.png"
+       } else if (data.wind.deg > 202.5 && data.wind.deg <= 247.5){
+            iconoVientoDireccion.src = "img/suroeste.png"
+       } else if (data.wind.deg > 247.5 && data.wind.deg <= 292.5){
+            iconoVientoDireccion.src = "img/oeste.png"
+       } else {
+            iconoVientoDireccion.src = "img/noroeste.png"
+                }
+
+
+
+
+
+
+
+
 
         console.log(data.weather[0].main);
         switch (data.weather[0].main) {
