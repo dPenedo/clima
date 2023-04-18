@@ -55,6 +55,7 @@ li{
     height: 22rem;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: height 0.8s !important;
 }
 
 .card-titulo{
@@ -164,32 +165,32 @@ li{
     visibility: hidden;
 }
 .card-temp-ampliada{
-    height: 22rem;
+    height: 22rem !important;
     transition: 0.8s;
-
 }
 .card-temp-reducida{
-    height: 16rem;
-    transition: 0.8s;
+    height: 22;
+    transition: all 0.8s;
 }
 .card-aire-ampliada{
-    height: 22rem;
-    transition: 0.8s;
+    height: 22rem !important;
+    transition: all 0.8s;
+
 }
 .card-aire-reducida{
-    height: 16rem;
-    transition: 0.8s;
+    height: 22rem;
+    transition: all 0.8s;
 }
 
 .card-info-lista-visible{
     visibility: visible !important;
-    transition: 1s;
+    /* transition: all 1s; */
     /* height: fit-content; */
 }
 
 .card-info-lista-temp-visible{
     visibility: visible !important;
-    transition: 1s;
+    /* transition: all 1s; */
 }
 
 @media (max-width: 840px) {
@@ -216,6 +217,7 @@ body{
     vertical-align: middle;
     padding-top: 8%;
     width: 25rem;
+    height: 20rem;
     /* min-width: 90%; */
     /* height: fit-content; */
 
@@ -249,6 +251,12 @@ body{
     /* max-width: 90%; */
 
 }
+.card-temp-reducida{
+    height: 18rem;
+    }
+.card-aire-reducida{
+    height: 18rem;
+    }
 
 .card-titulo{
     font-size: 1.2rem;
