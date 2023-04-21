@@ -2,7 +2,6 @@
 
 Detecta automáticamente tu ubicación!
 
-
 ### Por hacer:
 
 - Arreglar humedad y presión para que quede más claro-
