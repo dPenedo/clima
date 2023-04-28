@@ -1,6 +1,7 @@
 * {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,12 +17,11 @@ body {
   /* margin: 2% 0 8% 0 2%; */
   padding-bottom: 4%;
   align-items: center;
-  background: #9cecfb; /* fallback for old browsers */
+  background: #0052d4; /* fallback for old browsers */
   background: linear-gradient(
     to right,
     #0052d4,
-    #65c7f7,
-    #9cecfb
+    #279AF1
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 li {
@@ -36,7 +36,7 @@ li {
   flex-wrap: wrap;
   flex-direction: row;
   /* justify-content: center; */
-  gap: 43px;
+  gap: 48px;
   margin-bottom: 4rem;
 }
 
@@ -45,7 +45,7 @@ li {
   background-color: #00012b;
   border-radius: 10px;
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-bottom: 3rem;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
@@ -57,7 +57,7 @@ li {
   padding-top: 3rem;
   padding-bottom: 3rem;
   width: 20rem;
-  height: 18rem;
+  height: 20rem;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   transition: height 0.8s !important;
@@ -90,30 +90,34 @@ li {
 }
 
 #caja1 {
-  background-color: rgba(0, 0, 0, 0.777);
+  /* background-color: rgba(0, 0, 0, 0.777); */
+  background-color: #494850;
   color: azure;
   height: 14rem;
 }
 #caja2 {
-  background-color: rgba(21, 12, 80, 0.777);
+  /* background-color: rgba(21, 12, 80, 0.777); */
+  background-color: #00012b;
   color: azure;
   height: 16rem;
 }
 #caja3 {
-  background-color: rgba(0, 90, 70, 0.777);
+  /* background-color: rgba(0, 90, 70, 0.777); */
+  /* background-color: #9A7AA0; */
+  background-color: #7B506F;
   color: azure;
-  height: 21rem;
 }
 #caja4 {
   background-color: rgb(60, 76, 86);
   color: azure;
+  height: 21rem;
 }
 #icono-viento-direccion {
   background-color: azure;
   padding: 4px;
   border-radius: 10px;
-  margin-top: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .icono-aire {
@@ -127,9 +131,9 @@ li {
   border-color: white;
   border-width: 10px;
 }
-.buena {
-  color: #fff;
-}
+/* .buena { */
+/*   color: #fff; */
+/* } */
 #buena-icono {
   background-color: #54c18b;
 }
@@ -183,7 +187,7 @@ li {
   height: 22rem !important;
 }
 .card-aire-reducida {
-  height: 18rem;
+  height: 20rem;
   transition: all 0.8s;
 }
 
@@ -220,7 +224,7 @@ li {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
-    padding-top: 8%;
+    padding-top: 6%;
     /* width: 25rem; */
     /* height: 20rem; */
     /* min-width: 90%; */
@@ -254,7 +258,8 @@ li {
     display: inline-block;
     text-align: center;
     padding-top: 2rem;
-    width: 20rem;
+    width: 22rem;
+    height: 16rem;
     /* height: 18rem; */
     /* max-width: 90%; */
   }
@@ -262,7 +267,7 @@ li {
     height: 18rem;
   }
   .card-aire-reducida {
-    height: 18rem;
+    height: 12rem;
   }
 
   .card-titulo {
