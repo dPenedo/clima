@@ -1,7 +1,7 @@
-
 let lon;
 let lat;
 const apiKey = window.env.apiKey;
+console.log(apiKey)
 
 
 // Declaración de elementos HTML
