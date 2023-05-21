@@ -1,7 +1,7 @@
-import apiKey from "./config.js";
 
 let lon;
 let lat;
+const apiKey = process.env.API_KEY;
 
 
 // Declaración de elementos HTML
