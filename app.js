@@ -1,7 +1,7 @@
 
 let lon;
 let lat;
-const apiKey = process.env.API_KEY;
+const apiKey = process.env.apiKey;
 
 
 // Declaración de elementos HTML
