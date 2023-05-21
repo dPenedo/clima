@@ -1,0 +1,17 @@
+{
+  "name": "clima",
+  "version": "1.0.0",
+  "description": "Detecta automáticamente la ubicación y en base a dos APIs de *openweathermap*, aparece en pantalla las siguientes informaciones: - Ubicación - Temperatura actual - Sensación térmica - Temperatura máxima - Temperatura mínima - Humedad (en porcentaje e indica si se considera media, alta o baja) - Presión (en hectopascales e indica si se considera media, alta o baja) - Animación con el clima (lluvioso,nieve, sol, etc.) - Velocidad del viento - Dirección del viento (con grados y un icono que indica si es viento norte, noroeste, este, etc.) - Calidad del aire. Se calcula con una serie de 8 indicadores químicos que se pueden desplegar al darle a \"Más información\".",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
+  }
+}
