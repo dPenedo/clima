@@ -1,6 +1,6 @@
 let lon;
 let lat;
-const apiKey = window.env.apiKey;
+const apiKey = process.env.apiKey
 console.log(apiKey)
 
 
