@@ -1,8 +1,7 @@
 let lon;
 let lat;
-const apiKey = process.env.apiKey
-console.log(apiKey)
-
+const apiKey = process.env.apiKey;
+console.log(apiKey);
 
 // Declaración de elementos HTML
 let temperaturaValor = document.getElementById("temperatura-valor");
@@ -43,7 +42,7 @@ let infoVisible = false;
 let infoVisibleTemp = false;
 
 // Añadir informacion de la Calidad del aire
-masInformacion.addEventListener("click", function() {
+masInformacion.addEventListener("click", function () {
     if (infoVisible === true) {
         infoVisible = false;
         cardInfoLista.classList.remove("card-info-lista-visible");
@@ -59,7 +58,7 @@ masInformacion.addEventListener("click", function() {
 
 // Añadir informacion de la Temperatura
 
-masInformacionTemp.addEventListener("click", function() {
+masInformacionTemp.addEventListener("click", function () {
     if (infoVisibleTemp === true) {
         infoVisibleTemp = false;
         cardInfoListaTemp.classList.remove("card-info-lista-temp-visible");
@@ -80,7 +79,6 @@ if (navigator.geolocation) {
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=es&units=metric&appid=${apiKey}`;
         const urlPolucion = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
         // ubicación por ciudad
-        // const urlC = `https://api.openweathermap.org/data/2.5/weather?q=mardelplata&appid=982720c8a3be9d384303bf34920ad717`
         console.log(url);
         console.log(urlPolucion);
         fetch(urlPolucion)
@@ -166,7 +164,10 @@ if (navigator.geolocation) {
                 minTemp.textContent = data.main.temp_min;
                 if (data.main.humidity >= 60) {
                     humedad.textContent = data.main.humidity + "% (alta)";
-                } else if (data.main.humidity >= 30 && data.main.humidity <= 60) {
+                } else if (
+                    data.main.humidity >= 30 &&
+                    data.main.humidity <= 60
+                ) {
                     humedad.textContent = data.main.humidity + "% (adecuada)";
                 } else {
                     humedad.textContent = data.main.humidity + "% (baja)";
